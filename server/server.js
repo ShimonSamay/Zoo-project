@@ -13,7 +13,7 @@ const passport = require("passport");
 require("./config/user-passport")(passport);
 
 
-const PORT = process.env.PORT ;
+const port = process.env.PORT ;
 const app = express();
 
 
@@ -25,10 +25,8 @@ app.use(cors());
 app.use("/animals" , passport.authenticate("jwt" , {session:false}) , AnimalRouter);
 app.use("/workers", passport.authenticate("jwt" , {session:false}) , WorkerRouter);
 app.use("/users" , UserRouter);
-app.get("/users");
 
 
-
-app.listen(PORT , () => {
-    console.log(`server is on air at port:${PORT}`);
+app.listen(port , () => {
+    console.log(`server is on air at port:${port}`);
 });
