@@ -5,8 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1", 
-    "setup" : "npm install && npm run server",
-    "server": "nodemon node server/server.js" 
+    "server": "nodemon node server/server.js" , 
+    "setup" : "npm install && npm run server"
   
 
     
