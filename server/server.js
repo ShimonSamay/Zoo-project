@@ -25,7 +25,7 @@ app.use(cors());
 app.use("/animals" , passport.authenticate("jwt" , {session:false}) , AnimalRouter);
 app.use("/workers", passport.authenticate("jwt" , {session:false}) , WorkerRouter);
 app.use("/users" , UserRouter);
-
+app.get("/users");
 
 
 
